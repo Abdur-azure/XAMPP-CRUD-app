@@ -14,32 +14,11 @@
         </style>
     </head>
     <body>
-        <?php
-            require('./Connection.php');
-            if(isset($_POST['login_button'])) {
-                $_SESSION['validate']=false;
-                $email=$_POST['email'];
-                $password=$_POST['password'];
-                $p=xampp_crud::connect()->prepare('SELECT * FROM crud_table WHERE email=:e and pwd=:p');
-                $p->bindValue(':e',$email);
-                $p->bindValue(':p',$password);
-                $p->exceute();
-                $d=$p->fetchAll(PDO::FETCH_ASSOC);
-                if($p->rowCount()>0) {
-                    $_SESSION['email']=$email;
-                    $_SESSION['pwd']=$password;
-                    $_SESSION['validate']=true;
-                    header('location:Home.php');
-                }else {
-                    echo 'Make sure you are registered!';
-                }
-            }
-        ?>
         <div class="form">
             <div class="title">
                 <p>login</p>
             </div>
-            <form action="" method="post">                
+            <form action="Authentication.php" onsubmit="return validation()" method="POST">                
                 <input type="text" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
                 <input type="submit" name="login_button" value="Login">

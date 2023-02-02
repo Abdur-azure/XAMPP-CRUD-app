@@ -19,7 +19,7 @@
             <tbody>
                 <?php
                     require('./Connection.php');
-                 
+                    $p=xampp_crud::selectData();                    
                 ?>php
             </tbody>
         </table>
