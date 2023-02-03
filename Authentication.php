@@ -14,6 +14,7 @@ if (isset($_POST['login_button'])) {
         if ($password == $result['pwd']) {
             $_SESSION['user_id'] = $result['id'];
             echo '<p class="success">Congratulations, you are logged in!</p>';
+            header('Location:Home.php');
         } else {
             echo '<p class="error">Username password combination is wrong!</p>';
         }

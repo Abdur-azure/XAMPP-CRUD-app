@@ -22,6 +22,7 @@ if (isset($_POST['signUp_button'])) {
         $result = $query->execute();
         if ($result) {
             echo '<p class="success">Your registration was successful!</p>';
+            header('Location:Login.php');
         } else {
             echo '<p class="error">Something went wrong!</p>';
         }
