@@ -1,10 +1,11 @@
 <?php
-
-$con = mysqli_connect('localhost', 'root', '','xampp_crud');
-
-    if (mysqli_connect_errno()) 
-    {
-        die("Failed to connect with MySQL: ". mysqli_connect_error());
-    }
-
+define('USER', 'root');
+define('PASSWORD', '');
+define('HOST', 'localhost');
+define('DATABASE', 'xampp_crud');
+try {
+    $connection = new PDO("mysql:host=".HOST.";dbname=".DATABASE, USER, PASSWORD);
+} catch (PDOException $e) {
+    exit("Error: " . $e->getMessage());
+}
 ?>

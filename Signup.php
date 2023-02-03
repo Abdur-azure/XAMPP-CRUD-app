@@ -12,7 +12,7 @@
             <div class="title">
                 <p>Sign up form</p>
             </div>
-            <form action="Registration.php" method="POST">
+            <form action="Registration.php" method="post" name="signup-form">
                 <input type="text" name="firstName" placeholder="First Name">
                 <input type="text" name="lastName" placeholder="Last Name">
                 <input type="text" name="email" placeholder="Email">

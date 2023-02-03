@@ -18,7 +18,7 @@
             <div class="title">
                 <p>login</p>
             </div>
-            <form action="Authentication.php" onsubmit="return validation()" method="POST">                
+            <form action="Authentication.php" method="POST">                
                 <input type="text" name="email" placeholder="Email">
                 <input type="password" name="password" placeholder="Password">
                 <input type="submit" name="login_button" value="Login">
