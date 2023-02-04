@@ -20,7 +20,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `xampp_crud`
 --
-
+CREATE DATABASE `xampp_crud`
 -- --------------------------------------------------------
 
 --
