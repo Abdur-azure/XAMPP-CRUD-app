@@ -9,5 +9,7 @@
     </head>
     <body>
         <h1>Welcome to Home page</h1>
+        <input type="submit" name="sign_up" value="Signup" onclick="document.location='Signup.php'">
+        <input type="submit" name="login" value="Login" onclick="document.location='Login.php'">
     </body>
 </html>

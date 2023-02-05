@@ -14,9 +14,9 @@ if (isset($_POST['login_button'])) {
         if ($password == $result['pwd']) {
             $_SESSION['user_id'] = $result['id'];
             echo '<p class="success">Congratulations, you are logged in!</p>';
-            header('Location:Home.php');
+            header('Location: http://localhost/XAMPP-CRUD-app/Users.php');
         } else {
-            echo '<p class="error">Username password combination is wrong!</p>';
+            echo '<p class="error">Email, password combination is wrong!</p>';
         }
     }
 }   
